@@ -68,9 +68,9 @@
 
 /* Resposta 32 ->*/ SELECT MIN(max_salary),MAX(max_salary) FROM jobs;
 
-/* Resposta 33 ->*/ SELECT min_salary+max_salary AS soma_salario FROM jobs;
+/* Resposta 33 ->*/ SELECT SUM(min_salary) AS soma_min_salary, SUM(max_salary) AS soma_max_salary FROM jobs;
 
-/* Resposta 34 ->*/ SELECT SUM(min_salary) AS soma_min_salary, SUM(max_salary) AS soma_max_salary FROM jobs;
+/* Resposta 34 ->*/ SELECT AVG(salary) AS media_salary FROM employees;
 
 /* Resposta 35 ->*/ SELECT street_address FROM locations WHERE country_id LIKE "BR";
 
@@ -80,10 +80,18 @@
 
 /* Resposta 38 ->*/ SELECT DISTINCT manager_id FROM employees;
 
-/* Resposta 39 ->*/ SELECT DISTINCT manager_id FROM employees;
+/* Resposta 39 ->*/ SELECT country_name FROM countries WHERE country_id IN("US","UK","AR");
 
-/* Resposta 40 ->*/ SELECT country_name FROM countries WHERE country_id IN("US","UK","AR");
+/* Resposta 40 ->*/ SELECT country_name FROM countries WHERE country_name IN("Israel","Dinamarca");
 
-/* Resposta 41 ->*/
+/* Resposta 41 ->*/ SELECT * FROM job_history WHERE start_date;
 
-/* Resposta 42 ->*/
+/* Resposta 42 ->*/ SELECT start_date, end_date FROM job_history WHERE start_date BETWEEN '1993-01-01' and '1998-01-01';
+
+/* Resposta 43 ->*/ SELECT region_name FROM regions WHERE region_id NOT IN(1);
+ 
+/* Resposta 44 ->*/ SELECT country_name FROM countries ORDER BY country_name, country_id DESC;
+
+/* Resposta 45 ->*/ SELECT country_name FROM countries WHERE country_id NOT IN("BR","FR","US");
+
+/* Resposta 46 ->*/ SELECT employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id FROM employees WHERE department_id IS NULL;
