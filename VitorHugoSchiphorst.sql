@@ -73,3 +73,17 @@
 /* Resposta 34 ->*/ SELECT SUM(min_salary) AS soma_min_salary, SUM(max_salary) AS soma_max_salary FROM jobs;
 
 /* Resposta 35 ->*/ SELECT street_address FROM locations WHERE country_id LIKE "BR";
+
+/* Resposta 36 ->*/ SELECT country_name FROM countries ORDER BY country_name;
+
+/* Resposta 37 ->*/ SELECT region_id FROM regions ORDER BY region_id DESC;
+
+/* Resposta 38 ->*/ SELECT DISTINCT manager_id FROM employees;
+
+/* Resposta 39 ->*/ SELECT DISTINCT manager_id FROM employees;
+
+/* Resposta 40 ->*/ SELECT country_name FROM countries WHERE country_id IN("US","UK","AR");
+
+/* Resposta 41 ->*/
+
+/* Resposta 42 ->*/
